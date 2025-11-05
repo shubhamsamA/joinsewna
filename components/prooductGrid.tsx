@@ -17,6 +17,7 @@ export const ProductGrid = ({ amount }: ProductGridProps) => {
               designer={product.designer}
               price={product.price}
               rating={product.rating}
+                designerImage={product.designerImage}
             />
           ))
         : products
@@ -29,6 +30,7 @@ export const ProductGrid = ({ amount }: ProductGridProps) => {
                 designer={product.designer}
                 price={product.price}
                 rating={product.rating}
+                designerImage={product.designerImage}
               />
             ))}
     </div>

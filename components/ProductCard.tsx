@@ -11,6 +11,8 @@ interface ProductCardProps {
   rating: number;
   reviews?: number;
   category?: string;
+  designerImage: string;
+  
 }
 
 export function ProductCard({
@@ -19,6 +21,9 @@ export function ProductCard({
   designer,
   price,
   rating,
+  designerImage,
+
+
 }: ProductCardProps) {
   return (
     <div className="group bg-white h-[400px] w-fit rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -41,18 +46,20 @@ export function ProductCard({
             <h3 className="font-semibold text-gray-900 text-lg mb-1 line-clamp-1">
               {title}
             </h3>
-            {/* {designer && (
+            {designer && (
               <div className="flex items-center gap-2 mb-2">
                 <Image
-                  src={designer.avatar_url}
-                  alt={designer.name}
+                  src={designerImage}
+                  alt={designer}
+                  width={24}
+                  height={24}
                   className="w-6 h-6 rounded-full object-cover"
                 />
                 <span className="text-sm text-gray-600">
-                  {designer.name}
+                  {designer}
                 </span>
               </div>
-            )} */}
+            )}
           </div>
         </div>
 
